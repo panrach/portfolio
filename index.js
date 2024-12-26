@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             name: "Personal Website",
-            description: "I further improved by web development skills by building this website with vanilla HTML and Javascript.",
+            description: "I further improved my web development skills by building this website with vanilla HTML and Javascript.",
             techStack: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
         },

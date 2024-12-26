@@ -40,18 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const projects = [
         {
             name: "Pantry Pal",
-            description: "Pantry Pal is a meal plan preperation web-app. It helps you keep track of your pantry items and suggests recipes based on the ingredients you currently have. It allows users to save their favorite recipes with reminders to defrost ingredients and purchase missing ingredients. the synchronous collaboration features let users create groups, share ingredients, and discover group recipes. I deployed it securely with Docker on a Google Cloud VM.",
+            description: "Pantry Pal is a meal plan preperation web-app. Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients for planned meals. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. Pantry Pal was securely deployed with Docker on a Google Cloud VM.",
             techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
             youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE" // YouTube video link
         },
         {
             name: "Personal Website",
-            description: "I further improved by web development skills by building this website. It is responsive to different screen sizes.",
+            description: "I further improved by web development skills by building this website with vanilla HTML and Javascript.",
             techStack: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
         },
-        // You can add other projects here as well
     ];
 
     // Get the project list container

@@ -1,0 +1,595 @@
+/* style.css */
+body {
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    background: linear-gradient(to bottom, #ffe4e1, #fef6e4);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #ffccd5;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #ff729f;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff729f;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('./static/background.png') no-repeat center center fixed;
+}
+
+.section {
+    display: none;
+    margin: 20px 0; /* Reduced margin */
+    padding: 10px; /* Reduced padding */
+    border-radius: 12px;
+    background: rgba(221, 217, 220, 0.767); /* White background with 90% opacity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.box {
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0); /* White background with 90% opacity */
+    margin-bottom: 20px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start with a slight downward offset */
+    animation: fadeInUp 0.6s forwards; /* Apply animation */
+    animation-delay: calc(var(--box-index) * 0.2s); /* Stagger animation */
+}
+
+.animation-wrapper {
+    text-align: center;
+    color: #555;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    padding-top: 1vh; /* Reduced padding */
+    height: auto; /* Adjusted height */
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+    margin-bottom: 10px; /* Adjusted margin to reduce spacing */
+    margin-left: 20px; /* Move to the right */
+}
+
+.animation-wrapper div {
+    display: block; /* Ensure each div is on a new line */
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 5px; /* Adjusted margin to reduce spacing */
+}
+
+.animation-wrapper div:first-of-type {
+    animation: showup 7s forwards;
+}
+
+.animation-wrapper div:last-of-type {
+    width: auto; /* Adjusted width */
+    animation: reveal 7s forwards;
+}
+
+.animation-wrapper div:last-of-type span {
+    margin-left: 0; /* Adjusted margin */
+    animation: slidein 7s forwards;
+}
+
+@keyframes showup {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes slidein {
+    0% { margin-left: -800px; }
+    20% { margin-left: -800px; }
+    35% { margin-left: 0px; }
+    100% { margin-left: 0px; }
+}
+
+@keyframes reveal {
+    0% {opacity: 0; width: 0px;}
+    20% {opacity: 1; width: 0px;}
+    30% {width: auto;}
+    80% {opacity: 1;}
+    100% {opacity: 1; width: auto;}
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px; /* Reduced margin */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start with a slight downward offset */
+    animation: fadeInUp 0.6s forwards; /* Apply animation */
+    animation-delay: 0.2s; /* Delay the animation slightly */
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.about-text i {
+    margin-right: 10px;
+    color: #ff729f;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ffccd5;
+    margin: 20px 0;
+}
+
+.video-content {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.video-item {
+    display: flex; /* Ensure the video item uses Flexbox */
+    justify-content: center; /* Center the content within the item */
+    align-items: center; /* Center the content vertically */
+    gap: 20px; /* Add space between the video and the image */
+    margin: 20px;
+    max-width: 100%;
+}
+
+iframe {
+    width: 500px; /* Adjust the width to make the video wider */
+    height: 300px; /* Set a fixed height to make the video bigger */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Center the iframe within its container */
+}
+
+.craft-image {
+    width: 100%; /* Adjust the width to make the image wider */
+    max-width: 230px; /* Set a maximum width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start with a slight downward offset */
+    animation: fadeInUp 0.6s forwards; /* Apply animation */
+    animation-delay: calc(var(--project-index) * 0.2s); /* Stagger animation */
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Pop out effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #ff729f;
+}
+
+.project-card p {
+    color: #666;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    position: absolute; /* Absolute positioning for the icons */
+    top: 10px; /* Move to the top */
+    right: 10px; /* Align to the right */
+}
+
+.project-link {
+    color: #ff729f;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.project-link:hover {
+    color: #ff729f;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: flex-start; /* Left-align the tech stack tags */
+    flex-wrap: wrap;
+    gap: 5px; /* Adjust gap between logos */
+    margin: 10px 0;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: #ffccd5;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 5px 0 0;
+    font-size: 0.9em;
+}
+
+footer {
+    background: #ffccd5; /* Adjusted to match the header color */
+    padding: 5px; /* Adjusted padding to make the footer less tall */
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+#project-list li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+#project-list li a {
+    color: #ff729f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#project-list li a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.skills-category {
+    margin-bottom: 10px;
+}
+
+.skills-category h3 {
+    color: #ff729f;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.skills-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-category ul li {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.skills-category ul li::before {
+    content: "•";
+    color: #ff729f;
+    padding-right: 8px;
+    font-size: 1.2em;
+}
+
+.skills-category {
+    margin-bottom: 20px;
+}
+
+.skills-category h3 {
+    color: #ff729f;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px; /* Reduced gap between logos */
+    margin: 10px 0;
+}
+
+.tech-logo {
+    width: 60px; /* Adjust width */
+    height: 60px; /* Adjust height */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.tech-logo:hover {
+    transform: scale(1.1); /* Hover effect to scale up the logos */
+}
+
+
+.large-icon {
+    transform: scale(2); /* Scale up the icon */
+}
+
+.large-icon:hover{
+    transform: scale(2.2); /* Scale up the icon */
+}
+
+#css {
+    transform: scale(1.2); /* Scale up the icon */
+}
+
+#css:hover {
+    transform: scale(1.4); /* Scale up the icon */
+}
+
+@media (max-width: 768px) {
+    .tech-logo {
+        width: 50px; /* Adjust size for smaller screens */
+        height: 50px;
+    }
+}
+/* General styles for the timeline */
+.experience-list {
+    position: relative;
+    padding: 20px 0;
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    background: rgba(255, 255, 255, 0); /* White background with 90% opacity */
+}
+
+/* Timeline line */
+.experience-list:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: #ddd;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+/* Style for each timeline item */
+.timeline-item {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+    position: relative;
+    padding-left: 30px; /* Space for the dot */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start with a slight downward offset */
+    animation: fadeInUp 0.6s forwards; /* Apply animation */
+    animation-delay: calc(var(--timeline-index) * 0.2s); /* Stagger animation */
+}
+/* Right-aligned timeline item */
+.timeline-item.right {
+    justify-content: flex-end;
+    padding-right: 30px; /* Space for the dot */
+}
+
+/* Timeline item content */
+.timeline-content {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 400px;
+    position: relative;
+}
+
+/* Left-aligned timeline item content */
+.timeline-item.left .timeline-content {
+    left: -80px; /* Move to the left of the dot */
+}
+
+/* Right-aligned timeline item content */
+.timeline-item.right .timeline-content {
+    left: 80px; /* Move to the right of the dot */
+}
+
+/* Style for the timeline dot */
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff729f;
+    border: 4px solid #fff; /* White border for the dot */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    top: 50%; /* Position the dot vertically */
+    transform: translate(-50%, -50%); /* Center the dot */
+    z-index: 2; /* Ensure the dot is above other elements */
+}
+
+/* Timeline item content */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px; /* Adjust to align with dot */
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the description list */
+.timeline-content ul {
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+}
+
+.timeline-content ul li {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* Style for the timeline duration */
+.timeline-duration {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    z-index: 1; /* Ensure the duration is above other elements */
+}
+
+.timeline-item.left .timeline-duration {
+    left: calc(50% + 20px); /* Position to the right of the dot */
+}
+
+.timeline-item.right .timeline-duration {
+    right: calc(50% + 20px); /* Position to the left of the dot */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.timeline-content ul li {
+    font-size: 0.9em; /* Adjust font size as needed */
+}
+
+.name-title {
+    color: #ff729f; /* Set the color for Rachel Pan */
+    font-weight: bold; /* Make the text bold */
+}
+
+.experience-title {
+    color: #ff729f; /* Set the color for Rachel Pan */
+    font-weight: bold; /* Make the text bold */
+}
+
+.email-link {
+    color: #ff729f; /* Set the color for the email link */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Adjust font size as needed */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Add space between the icon and the text */
+}
+
+.email-link i {
+    font-size: 1.2em; /* Adjust icon size as needed */
+}
+
+.email-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}

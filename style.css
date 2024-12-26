@@ -25,7 +25,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #ff729f;
     text-decoration: none;
     font-weight: bold;
     margin: 0 10px;
@@ -36,7 +36,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #ff729f;
+    background: #ffffff;
 }
 
 .social-links {
@@ -246,6 +246,7 @@ iframe {
     transform: translateY(20px); /* Start with a slight downward offset */
     animation: fadeInUp 0.6s forwards; /* Apply animation */
     animation-delay: calc(var(--project-index) * 0.2s); /* Stagger animation */
+    margin-bottom: 40px;
 }
 
 .project-card:hover {

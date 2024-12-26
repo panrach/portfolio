@@ -593,3 +593,20 @@ ul li {
 .email-link:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+
+footer {
+    background: #ffccd5; /* Adjusted to match the header color */
+    padding: 5px; /* Adjusted padding to make the footer less tall */
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+footer a {
+    color: #ff729f; /* Set the color for the link */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}

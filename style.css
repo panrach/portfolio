@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    cursor: url('./static/cursor.cur'), auto; /* Custom cursor */
 }
 
 header {
@@ -33,6 +34,7 @@ nav a {
     padding: 10px;
     border-radius: 5px;
     transition: background 0.3s;
+    cursor: url('./static/cursor.cur'), auto; /* Custom cursor for clickable elements */
 }
 
 nav a:hover {
@@ -44,14 +46,15 @@ nav a:hover {
 }
 
 .social-links a {
-    color: #fff;
+    color: #ff729f;
     margin: 0 10px;
     font-size: 1.5em;
     transition: color 0.3s;
+    cursor: url('./static/cursor.cur'), auto; /* Custom cursor for clickable elements */
 }
 
 .social-links a:hover {
-    color: #ff729f;
+    color: #fff;
 }
 
 main {
@@ -279,14 +282,15 @@ iframe {
 }
 
 .project-link:hover {
-    color: #ff729f;
+    color: #fff;
+    cursor: url('./static/cursor.cur'), auto; /* Custom cursor for YouTube and GitHub logos */
 }
 
 .tech-stack {
     display: flex;
     justify-content: flex-start; /* Left-align the tech stack tags */
     flex-wrap: wrap;
-    gap: 5px; /* Adjust gap between logos */
+    gap: 10px; /* Reduce gap between items */
     margin: 10px 0;
 }
 
@@ -299,6 +303,22 @@ iframe {
     margin: 5px 5px 0 0;
     font-size: 0.9em;
 }
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: -50px;
+}
+
+.tech-logo {
+    width: 60px; /* Adjust width */
+    height: 60px; /* Adjust height */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
 
 footer {
     background: #ffccd5; /* Adjusted to match the header color */
@@ -337,10 +357,13 @@ ul li {
     margin-bottom: 10px;
 }
 
+.skills-category h2 {
+    margin-bottom: 10px; /* Reduce space below the Skills heading */
+}
+
 .skills-category h3 {
-    color: #ff729f;
-    margin-bottom: 5px;
-    font-size: 1.2em;
+    margin-top: 0; /* Remove space above the subheading */
+    margin-bottom: 10px; /* Reduce space below the subheading */
 }
 
 .skills-category ul {
@@ -355,7 +378,6 @@ ul li {
 }
 
 .skills-category ul li::before {
-    content: "•";
     color: #ff729f;
     padding-right: 8px;
     font-size: 1.2em;
@@ -414,6 +436,7 @@ ul li {
         height: 50px;
     }
 }
+
 /* General styles for the timeline */
 .experience-list {
     position: relative;
@@ -438,6 +461,7 @@ ul li {
 
 /* Style for each timeline item */
 .timeline-item {
+    position: absolute;
     display: flex;
     justify-content: flex-start;
     margin: 20px 0;
@@ -448,6 +472,7 @@ ul li {
     animation: fadeInUp 0.6s forwards; /* Apply animation */
     animation-delay: calc(var(--timeline-index) * 0.2s); /* Stagger animation */
 }
+
 /* Right-aligned timeline item */
 .timeline-item.right {
     justify-content: flex-end;
@@ -462,6 +487,12 @@ ul li {
     background: rgba(255, 255, 255, 0.5);
     width: 400px;
     position: relative;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.timeline-content:hover {
+    transform: translateY(-10px) scale(1.05); /* Pop out effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 /* Left-aligned timeline item content */
@@ -573,13 +604,14 @@ ul li {
     font-weight: bold; /* Make the text bold */
 }
 
+
 .experience-title {
     color: #ff729f; /* Set the color for Rachel Pan */
     font-weight: bold; /* Make the text bold */
 }
 
 .email-link {
-    color: #ff729f; /* Set the color for the email link */
+    color: #555; /* Set the color for the email link */
     text-decoration: none; /* Remove underline */
     font-size: 1em; /* Adjust font size as needed */
     display: flex;
@@ -610,4 +642,34 @@ footer a {
 
 footer a:hover {
     text-decoration: underline; /* Add underline on hover */
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .timeline-content {
+        width: 300px; /* Make the content skinnier on smaller screens */
+    }
+
+    .timeline-item.left .timeline-content {
+        left: -60px; /* Adjust positioning for smaller screens */
+    }
+
+    .timeline-item.right .timeline-content {
+        left: 60px; /* Adjust positioning for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-content {
+        width: 200px; /* Make the content even skinnier on very small screens */
+    }
+
+    .timeline-item.left .timeline-content {
+        left: -40px; /* Adjust positioning for very small screens */
+    }
+
+    .timeline-item.right .timeline-content {
+        left: 40px; /* Adjust positioning for very small screens */
+    }
 }

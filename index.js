@@ -51,6 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
             techStack: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
         },
+        {
+            name: "Tetris",
+            description: "A fully functioning tetris game built with MIPS assembly.",
+            techStack: ["MIPS Assembly"],
+            githubLink: "https://github.com/panrach/b58project.git", // GitHub repository link
+        },
     ];
 
     // Get the project list container

@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const projects = [
         {
             name: "Pantry Pal",
-            description: "Pantry Pal is a webapp that helps you keep track of your pantry items and suggests recipes based on what you have. It allows users to input items, check their expiration dates, and find recipes that match their available ingredients. Collaboration features let users create groups, share ingredients, and discover group recipes. Changes are synchronized across pantry, shopping list, and recipes.",
+            description: "Pantry Pal is a webapp that helps you keep track of your pantry items and suggests recipes based on what you have. It allows users to save their favorite recipes and plan them with reminders to defrost ingredients and purchase missing ingredients. Collaboration features let users create groups, share ingredients, and discover group recipes. Changes are synchronized across pantry, shopping list, and recipes.",
             techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
             youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE" // YouTube video link
         },
         {
             name: "Personal Website",
-            description: "My introduction to web development was through building this website. It is responsive to different screen sizes.",
+            description: "I further improved by web development skills by building this website. It is responsive to different screen sizes.",
             techStack: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
         },

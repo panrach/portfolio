@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const projects = [
         {
             name: "Pantry Pal",
-            description: "Pantry Pal is a webapp that helps you keep track of your pantry items and suggests recipes based on what you have. It allows users to save their favorite recipes and plan them with reminders to defrost ingredients and purchase missing ingredients. Collaboration features let users create groups, share ingredients, and discover group recipes. Changes are synchronized across pantry, shopping list, and recipes.",
+            description: "Pantry Pal is a meal plan preperation web-app. It helps you keep track of your pantry items and suggests recipes based on the ingredients you currently have. It allows users to save their favorite recipes with reminders to defrost ingredients and purchase missing ingredients. the synchronous collaboration features let users create groups, share ingredients, and discover group recipes. I deployed it securely with Docker on a Google Cloud VM.",
             techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
             youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE" // YouTube video link
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
             description: ["✿ Migrated a RESTful application from Perl to Node-RED, streamlining environment information tracking, supporting database management & XML file maintenance", 
                           "✿ Deployed the application with Docker, Kubernetes, and Helm, on RedHat OpenShift", 
                           "✿ Automated daily report analysis with Perl and Node-RED eliminating hours of administrative tasks per week and guaranteeing reliability", 
-                          "✿ Independently learned and introduced a new technoogy (Node-RED) to a team of developers by conducting a live demo & detailed presentation"]
+                          "✿ Independently learned and introduced a new technology (Node-RED) to a team of developers by conducting a live demo & detailed presentation"]
         },
     ];
 

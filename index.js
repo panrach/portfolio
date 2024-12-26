@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "DevOps Intern",
             company: "SS&C Technologies",
             duration: "September 2023 - April 2024",
-            description: ["✿ Migrated a RESTful application from Perl to Node-RED, streamlining environment information tracking, supporting database management & XML file maintenance", 
+            description: ["✿ Migrated a RESTful application from Perl to Node-RED, streamlining environment information tracking, and supporting database management & XML file maintenance", 
                           "✿ Deployed the application with Docker, Kubernetes, and Helm, on RedHat OpenShift", 
                           "✿ Automated daily report analysis with Perl and Node-RED eliminating hours of administrative tasks per week and guaranteeing reliability", 
                           "✿ Independently learned and introduced a new technology (Node-RED) to a team of developers by conducting a live demo & detailed presentation"]

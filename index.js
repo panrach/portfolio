@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Piano Performer (Volunteer)",
             company: "Perley Health",
-            duration: "2018 - 2020",
+            duration: "July 2018 - March 2020",
             description: ["✿ Performed solo piano for seniors & veterans and accompanied soloists for singing performances", 
                           "✿ Engaged with residents and staff to faciliate a welcoming environment"]
         },

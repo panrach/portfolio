@@ -216,13 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
                           "✿ Automated daily report analysis with Perl and Node-RED eliminating hours of administrative tasks per week and guaranteeing reliability", 
                           "✿ Independently learned and introduced a new technology (Node-RED) to a team of developers by conducting a live demo & detailed presentation"]
         },
-        {
-            title: "Piano Performer (Volunteer)",
-            company: "Perley Health",
-            duration: "July 2018 - March 2020",
-            description: ["✿ Performed solo piano for seniors & veterans and accompanied soloists for singing performances", 
-                          "✿ Engaged with residents and staff to faciliate a welcoming environment"]
-        },
     ];
 
     // Get the experience list container

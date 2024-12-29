@@ -137,19 +137,19 @@ document.addEventListener("DOMContentLoaded", () => {
             description: "Pantry Pal is a meal plan preperation web-app. Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients for planned meals. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. Pantry Pal was securely deployed with Docker on a Google Cloud VM.",
             techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
-            youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE" // YouTube video link
+            youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE"
         },
         {
             name: "Tetris",
             description: "A fully functioning tetris game built with MIPS assembly.",
             techStack: ["MIPS Assembly"],
-            githubLink: "https://github.com/panrach/b58project.git", // GitHub repository link
+            githubLink: "https://github.com/panrach/b58project.git"
         },
         {
             name: "Personal Website",
-            description: "I further improved my web development skills by building this website using vanilla HTML and CSS.",
+            description: "I further improved my web development skills by building this website using vanilla HTML and CSS. Please check the GitHub README file for credits on the background, cursor, and cherry blossom animation.",
             techStack: ["HTML", "CSS", "JavaScript"],
-            githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
+            githubLink: "https://github.com/panrach/portfolio"
         },
     ];
 

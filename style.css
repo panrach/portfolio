@@ -22,7 +22,7 @@ header {
 }
 
 h2 {
-    margin-bottom: -10px;
+    margin-bottom: 45px;
 }
 
 nav {
@@ -225,6 +225,7 @@ main {
 
 .video-content {
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
     flex-wrap: wrap;
@@ -233,27 +234,47 @@ main {
 
 .video-item {
     display: flex; /* Ensure the video item uses Flexbox */
-    justify-content: center; /* Center the content within the item */
+    flex-direction: row; /* Stack items vertically */
     align-items: center; /* Center the content vertically */
     gap: 20px; /* Add space between the video and the image */
     margin: 20px;
-    max-width: 100%;
+    width: 200%; /* Ensure full width */
+    max-width: 800px; /* Set a maximum width */
 }
 
 iframe {
-    width: 500px; /* Adjust the width to make the video wider */
-    height: 300px; /* Set a fixed height to make the video bigger */
+    width: 100%; /* Make the iframe responsive */
+    height: auto; /* Maintain the aspect ratio */
+    aspect-ratio: 16 / 9; /* Set the aspect ratio */
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: auto; /* Center the iframe within its container */
 }
 
 .craft-image {
-    width: 100%; /* Adjust the width to make the image wider */
+    width: 100%; /* Make the image responsive */
     max-width: 230px; /* Set a maximum width */
     height: auto; /* Maintain the aspect ratio */
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .video-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content vertically */
+        width: 100%; /* Ensure full width */
+        max-width: 400px; /* Remove maximum width constraint */
+    }
+
+    iframe {
+        width: 100%; /* Ensure full width on smaller screens */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .craft-image {
+        width: 100%; /* Ensure full width on smaller screens */
+        max-width: 200px; /* Remove maximum width constraint */
+    }
 }
 
 .project-list {
@@ -281,7 +302,8 @@ iframe {
     transform: translateY(20px); /* Start with a slight downward offset */
     animation: fadeInUp 0.6s forwards; /* Apply animation */
     animation-delay: calc(var(--project-index) * 0.2s); /* Stagger animation */
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    margin-top: -30px;
 }
 
 .project-card:hover {
@@ -333,7 +355,7 @@ iframe {
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
-    margin-bottom: -50px;
+    margin-bottom: -15px;
 }
 
 footer {
@@ -399,7 +421,7 @@ ul li {
 
 
 .skills-category h3 {
-    margin-top: 0; /* Remove space above the category title */
+    margin-top: -50px; /* Remove space above the category title */
     color: #ff729f;
     font-size: 1.5em;
     margin-bottom: 5px;
@@ -458,13 +480,17 @@ ul li {
     background: rgba(255, 255, 255, 0); /* White background with 90% opacity */
 }
 
+.company-name {
+    font-weight: bold; /* Make the company name bold */
+}
+
 /* Timeline line */
 .experience-list:before {
-    margin-top: 15px;
+    margin-top: -40px;
     content: '';
     position: absolute;
     left: 50%;
-    height: 95%;
+    height: 108%;
     width: 2px;
     background-color: #ddd;
     top: 0;
@@ -497,9 +523,25 @@ ul li {
     background-color: #ffffff;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.5);
-    width: 400px;
+    max-width: 400px;
+    width: calc(100% - 40px); /* Ensure it adjusts with padding or margins */
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+    margin-top: -50px;
+    margin-left: -20px;
+}
+
+@media (max-width: 962px) {
+    .timeline-content {
+        max-width: 45%; /* Make it smaller at this breakpoint */
+        margin-left: 60px; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .timeline-content {
+        max-width: 400px; /* Restrict to a fixed max width on very large screens */
+    }
 }
 
 .timeline-content:hover {
@@ -589,6 +631,16 @@ ul li {
 .experience-title {
     color: #ff729f; /* Set the color for Rachel Pan */
     font-weight: bold; /* Make the text bold */
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+.experience-image {
+    width: 40%; /* Make the image responsive */
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Match the border-radius of the content */
+    margin-top: 5px; /* Add space below the image */
+    margin-bottom: -5px; /* Add space below the image */
 }
 
 .email-link {
@@ -633,35 +685,6 @@ footer a:hover {
     height: 100%;
     pointer-events: none; /* Ensure it doesn't interfere with other interactions */
     display: none; /* Hide by default */
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .timeline-content {
-        width: 300px; /* Make the content skinnier on smaller screens */
-    }
-
-    .timeline-item.left .timeline-content {
-        left: -60px; /* Adjust positioning for smaller screens */
-    }
-
-    .timeline-item.right .timeline-content {
-        left: 60px; /* Adjust positioning for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .timeline-content {
-        width: 200px; /* Make the content even skinnier on very small screens */
-    }
-
-    .timeline-item.left .timeline-content {
-        left: -40px; /* Adjust positioning for very small screens */
-    }
-
-    .timeline-item.right .timeline-content {
-        left: 40px; /* Adjust positioning for very small screens */
-    }
 }
 
 @keyframes showup {

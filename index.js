@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             name: "Personal Website",
-            description: "I further improved my web development skills by building this website using vanilla HTML and CSS. Please check the GitHub README file for credits on the background, cursor, and cherry blossom animation.",
+            description: "I further improved my web development skills by building this website using vanilla HTML and CSS - it is also responsive. Please check the GitHub README file for credits on the background, cursor, and cherry blossom animation.",
             techStack: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/panrach/portfolio"
         },
@@ -214,7 +214,8 @@ document.addEventListener("DOMContentLoaded", () => {
             description: ["✿ Migrated a RESTful application from Perl to Node-RED, streamlining environment information tracking, and supporting database management & XML file maintenance", 
                           "✿ Deployed the application with Docker, Kubernetes, and Helm, on RedHat OpenShift", 
                           "✿ Automated daily report analysis with Perl and Node-RED eliminating hours of administrative tasks per week and guaranteeing reliability", 
-                          "✿ Independently learned and introduced a new technology (Node-RED) to a team of developers by conducting a live demo & detailed presentation"]
+                          "✿ Independently learned and introduced a new technology (Node-RED) to a team of developers by conducting a live demo & detailed presentation"],
+            image: "./static/SS&C_Technologies.png"
         },
     ];
 
@@ -241,11 +242,17 @@ document.addEventListener("DOMContentLoaded", () => {
         title.textContent = experience.title;
 
         const company = document.createElement('p');
+        company.className = 'company-name'; // Add class for styling
         company.textContent = experience.company;
 
         const duration = document.createElement('div');
         duration.className = 'timeline-duration';
         duration.textContent = experience.duration;
+
+        const experienceImage = document.createElement('img');
+        experienceImage.src = experience.image; // Replace with the actual image path
+        experienceImage.alt = 'Experience Image';
+        experienceImage.className = 'experience-image';
 
         const descriptionList = document.createElement('ul');
         experience.description.forEach(point => {
@@ -253,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
             listItem.textContent = point;
             descriptionList.appendChild(listItem);
         });
-
+        timelineContent.appendChild(experienceImage); // Add the image to the timeline content
         timelineContent.appendChild(title);
         timelineContent.appendChild(company);
         timelineContent.appendChild(descriptionList);
@@ -270,12 +277,14 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             category: "Languages & Databases",
             items: [
+                { name: "C", logo: "./static/C.png" },
+                { name: "JavaScript", logo: "./static/js-logo.png" },
+                { name: "Python", logo: "./static/Python.png" },
+                { name: "Perl", logo: "./static/perl-logo.png" },
+                { name: "Node-RED", logo: "./static/node-red-icon.png" },
                 { name: "HTML", logo: "./static/html-5-logo.png" },
                 { name: "CSS", logo: "./static/css3-logo.png" },
-                { name: "JavaScript", logo: "./static/js-logo.png" },
                 { name: "postgreSQL", logo: "./static/sql-logo.png" },
-                { name: "Perl", logo: "./static/perl-logo.png" },
-                { name: "Node-RED", logo: "./static/node-red-icon.png" }
             ]
         },
         {

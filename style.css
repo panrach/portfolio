@@ -534,7 +534,7 @@ ul li {
 @media (max-width: 962px) {
     .timeline-content {
         max-width: 45%; /* Make it smaller at this breakpoint */
-        margin-left: 60px; /* Adjust margin for smaller screens */
+        margin-left: 50px; /* Adjust margin for smaller screens */
     }
 }
 
@@ -624,8 +624,13 @@ ul li {
 }
 
 .name-title {
+    font-size: 1em; /* Adjust font size as needed */
     color: #ff729f; /* Set the color for Rachel Pan */
     font-weight: bold; /* Make the text bold */
+}
+
+.animation-wrapper span {
+    font-size: 1em; /* Adjust font size as needed */
 }
 
 .experience-title {
@@ -650,6 +655,20 @@ ul li {
     display: flex;
     align-items: center;
     gap: 5px; /* Add space between the icon and the text */
+}
+
+@media (max-width: 390px) {    
+    .animation-wrapper span {
+        font-size: 0.7em; /* Further adjust font size for very small screens */
+    }
+
+    .about-text {
+        font-size: 0.8em; /* Further adjust font size for very small screens */
+    }
+
+    .about-content span {
+        font-size: 1em; /* Further adjust font size for very small screens */
+    }
 }
 
 .email-link i {

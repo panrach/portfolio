@@ -27,6 +27,21 @@ navLinks.forEach((link) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+    const navLinkItems = document.querySelectorAll(".nav-link");
+
+    hamburgerMenu.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+    });
+
+    navLinkItems.forEach((link) => {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove('show'); // Close the menu when a link is clicked
+            toggleSections.call(this); // Call the toggleSections function
+        });
+    });
+    
     // Show the "About Me" section by default
     const aboutSection = document.getElementById("about");
     aboutSection.style.display = "block";  // Show "About Me" section by default

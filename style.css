@@ -22,14 +22,26 @@ header {
 }
 
 h2 {
-    margin-bottom: 45px;
+    margin-bottom: 10px;
 }
 
 nav {
-    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
-nav a {
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
     color: #ff729f;
     text-decoration: none;
     font-weight: bold;
@@ -41,8 +53,61 @@ nav a {
     cursor: url('./static/cursor.cur'), auto; /* Custom cursor for clickable elements */
 }
 
-nav a:hover {
-    background: #ffffff;
+.nav-links a:hover {
+    color: #fff;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu i {
+    font-size: 1.5em;
+    color: #ff729f;
+}
+
+.hamburger-menu:hover i {
+    color: #fff; /* Change the color on hover */
+    transform: scale(1.2); /* Optionally, scale up the icon on hover */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+    cursor: url('./static/cursor.cur'), auto; /* Custom cursor for clickable elements */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 646px) {
+    .nav-links {
+        max-height: 0; /* Start with hidden state */
+        overflow: hidden; /* Hide overflow */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #ffccd5;
+        padding: 0 0; /* Remove padding initially */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Ensure the nav links are above other elements */
+        opacity: 0; /* Start with hidden state */
+        transform: translateY(-20px); /* Start with hidden state */
+        transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for max-height, opacity, and transform */
+    }
+
+    .nav-links.show {
+        max-height: 500px; /* Set a max-height to allow for the dropdown */
+        padding: 10px 0; /* Add padding when shown */
+        opacity: 1; /* Show state */
+        transform: translateY(0); /* Show state */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        margin-bottom: -10px; /* Adjusted margin to reduce spacing */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+    }
 }
 
 .social-links {
@@ -302,8 +367,8 @@ iframe {
     transform: translateY(20px); /* Start with a slight downward offset */
     animation: fadeInUp 0.6s forwards; /* Apply animation */
     animation-delay: calc(var(--project-index) * 0.2s); /* Stagger animation */
-    margin-bottom: 40px;
-    margin-top: -30px;
+    margin-bottom: 20px;
+    margin-top: -10px;
 }
 
 .project-card:hover {
@@ -415,13 +480,8 @@ ul li {
     margin-bottom: 20px;
 }
 
-.skills-category h2 {
-    margin-bottom: 10px; /* Reduce space below the Skills heading */
-}
-
-
 .skills-category h3 {
-    margin-top: -50px; /* Remove space above the category title */
+    margin-top: -10px; /* Remove space above the category title */
     color: #ff729f;
     font-size: 1.5em;
     margin-bottom: 5px;
@@ -486,11 +546,11 @@ ul li {
 
 /* Timeline line */
 .experience-list:before {
-    margin-top: -40px;
+    margin-top: -10px;
     content: '';
     position: absolute;
     left: 50%;
-    height: 108%;
+    height: 100%;
     width: 2px;
     background-color: #ddd;
     top: 0;
@@ -527,7 +587,7 @@ ul li {
     width: calc(100% - 40px); /* Ensure it adjusts with padding or margins */
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
-    margin-top: -50px;
+    margin-top: -20px;
     margin-left: -20px;
 }
 

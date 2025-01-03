@@ -64,7 +64,6 @@ function initializeLightbox() {
         });
     });
 
-
     // Add event listener to close the lightbox
     lightbox.addEventListener('click', (e) => {
         if (e.target !== lightboxImage && e.target !== leftArrow && e.target !== rightArrow) {

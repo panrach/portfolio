@@ -342,6 +342,25 @@ iframe {
     }
 }
 
+@media (max-width: 475px) {
+    .video-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content vertically */
+        width: 80%; /* Ensure full width */
+        max-width: 400px; /* Remove maximum width constraint */
+    }
+
+    iframe {
+        width: 100%; /* Ensure full width on smaller screens */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .craft-image {
+        width: 100%; /* Ensure full width on smaller screens */
+        max-width: 200px; /* Remove maximum width constraint */
+    }
+}
+
 .project-list {
     display: flex;
     flex-direction: column;

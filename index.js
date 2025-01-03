@@ -45,7 +45,7 @@ function initializeLightbox() {
     lightbox.appendChild(rightArrow);
 
     let currentIndex = 0;
-    const images = document.querySelectorAll('.project-image');
+    let images = [];
 
     function showImage(index) {
         const image = images[index];
@@ -56,12 +56,14 @@ function initializeLightbox() {
     }
 
     // Add event listener to images
-    images.forEach((image, index) => {
+    document.querySelectorAll('.project-image').forEach((image, index) => {
         image.addEventListener('click', (e) => {
             e.stopPropagation(); // Prevent the click event from bubbling up
-            showImage(index);
+            images = Array.from(document.querySelectorAll('.project-image')).filter(img => img.closest('.project-card') === image.closest('.project-card'));
+            showImage(images.indexOf(image));
         });
     });
+
 
     // Add event listener to close the lightbox
     lightbox.addEventListener('click', (e) => {

@@ -323,7 +323,7 @@ iframe {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 855px) {
     .video-item {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center the content vertically */
@@ -866,13 +866,6 @@ footer a:hover {
 #left-arrow:hover, #right-arrow:hover {
     color: #ccc;
     cursor: url('./static/cursor.cur'), auto; /* Custom cursor */
-}
-
-@keyframes showup {
-    0% {opacity: 0;}
-    20% {opacity: 1;}
-    80% {opacity: 1;}
-    100% {opacity: 1;}
 }
 
 @keyframes showup {

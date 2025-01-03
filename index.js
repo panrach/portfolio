@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const projects = [
         {
             name: "Pantry Pal",
-            description: "Pantry Pal is a meal plan preperation web-app - I did frontend and my friend Janani did backend :) Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. Pantry Pal was securely deployed with Docker on a Google Cloud VM.",
+            description: "Pantry Pal is a meal plan preperation web-app; I did frontend and my friend Janani did backend :) Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. Pantry Pal was securely deployed with Docker on a Google Cloud VM.",
             techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
             youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE",
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             name: "Personal Website",
-            description: "I further improved my web development skills by building this website using vanilla HTML and CSS - it is also responsive. See the GitHub README file for credits on the background, cursor, and cherry blossom animation.",
+            description: "I further improved my web development skills by building this website using vanilla HTML and CSS - it is also responsive. See the GitHub README file for credits on the background, cursor, and cherry blossom animation :)",
             techStack: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/panrach/portfolio"
         },

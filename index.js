@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             name: "Personal Website",
-            description: "I further improved my web development skills by building this website using vanilla HTML and CSS - it is also responsive. Please check the GitHub README file for credits on the background, cursor, and cherry blossom animation.",
+            description: "I further improved my web development skills by building this website using vanilla HTML and CSS - it is also responsive. See the GitHub README file for credits on the background, cursor, and cherry blossom animation.",
             techStack: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/panrach/portfolio"
         },

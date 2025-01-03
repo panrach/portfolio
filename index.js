@@ -2,7 +2,7 @@
 
 // Function to show the selected section and hide others
 function toggleSections(event) {
-    event.preventDefault();  // Prevent default anchor behavior
+    event.preventDefault();
 
     // Get the target section
     const target = event.target.getAttribute("data-target");
@@ -18,6 +18,70 @@ function toggleSections(event) {
     if (selectedSection) {
         selectedSection.style.display = "block";
     }
+}
+
+// Function to initialize lightbox event listeners
+function initializeLightbox() {
+    // Create the lightbox elements
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    document.body.appendChild(lightbox);
+
+    const lightboxCaption = document.createElement('p');
+    lightboxCaption.id = 'lightbox-caption';
+    lightbox.appendChild(lightboxCaption);
+
+    const lightboxImage = document.createElement('img');
+    lightbox.appendChild(lightboxImage);
+
+    const leftArrow = document.createElement('div');
+    leftArrow.id = 'left-arrow';
+    leftArrow.innerHTML = '&#9664;'; // Left arrow symbol
+    lightbox.appendChild(leftArrow);
+
+    const rightArrow = document.createElement('div');
+    rightArrow.id = 'right-arrow';
+    rightArrow.innerHTML = '&#9654;'; // Right arrow symbol
+    lightbox.appendChild(rightArrow);
+
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.project-image');
+
+    function showImage(index) {
+        const image = images[index];
+        lightboxImage.src = image.src;
+        lightboxCaption.textContent = image.alt || 'No caption available';
+        lightbox.classList.add('active');
+        currentIndex = index;
+    }
+
+    // Add event listener to images
+    images.forEach((image, index) => {
+        image.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent the click event from bubbling up
+            showImage(index);
+        });
+    });
+
+    // Add event listener to close the lightbox
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImage && e.target !== leftArrow && e.target !== rightArrow) {
+            lightbox.classList.remove('active');
+        }
+    });
+
+    // Add event listeners for pagination
+    leftArrow.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        showImage(currentIndex);
+    });
+
+    rightArrow.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        showImage(currentIndex);
+    });
 }
 
 // Add event listeners to navigation links
@@ -36,9 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     navLinkItems.forEach((link) => {
-        link.addEventListener("click", function () {
+        link.addEventListener("click", function (event) {
             navLinks.classList.remove('show'); // Close the menu when a link is clicked
-            toggleSections.call(this); // Call the toggleSections function
+            toggleSections(event); // Call the toggleSections function with the event object
         });
     });
     
@@ -149,16 +213,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const projects = [
         {
             name: "Pantry Pal",
-            description: "Pantry Pal is a meal plan preperation web-app. Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients for planned meals. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. Pantry Pal was securely deployed with Docker on a Google Cloud VM.",
+            description: "Pantry Pal is a meal plan preperation web-app - I did frontend and my friend Janani did backend :) Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. Pantry Pal was securely deployed with Docker on a Google Cloud VM.",
             techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
-            youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE"
+            youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE",
+            images: [{ src: "./static/PantryPal1.jpg", caption: "My Pantry + Recipe Recs" }, 
+                    { src: "./static/PantryPal2.jpg", caption: "Groups feature" }, 
+                    { src: "./static/PantryPal3.jpg", caption: "Recipe Search" },
+                    { src: "./static/PantryPal4.jpg", caption: "Automatic ingredient split for a planned recipe" },
+                    { src: "./static/PantryPal5.jpg", caption: "Meal plans" }],
         },
         {
             name: "Tetris",
-            description: "A fully functioning tetris game built with MIPS assembly.",
+            description: "A fully functioning tetris game built with MIPS assembly - done with my friend Janani :)",
             techStack: ["MIPS Assembly"],
-            githubLink: "https://github.com/panrach/b58project.git"
+            githubLink: "https://github.com/panrach/b58project.git",
+            images: [{ src: "./static/tetris1.jpg", caption: "Starting the tetris game!" }, { src: "./static/tetris2.jpg", caption: "Holding a block" }, { src: "./static/tetris3.jpg", caption: "Cleared a row!" }]
         },
         {
             name: "Personal Website",
@@ -181,6 +251,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const projectDescription = document.createElement('p');
         projectDescription.textContent = project.description;
+
+        // Create a container for images
+        const projectImagesContainer = document.createElement('div');
+        projectImagesContainer.classList.add('project-images-container');
+
+        // Check if there are images and create image elements with captions
+        if (project.images && project.images.length > 0) {
+        project.images.forEach(image => {
+            const imageContainer = document.createElement('div');
+            imageContainer.classList.add('image-container');
+
+            const projectImage = document.createElement('img');
+            projectImage.src = image.src;
+            projectImage.alt = image.caption;
+            projectImage.classList.add('project-image');
+
+            const imageCaption = document.createElement('p');
+            imageCaption.textContent = image.caption;
+            imageCaption.classList.add('image-caption');
+
+            imageContainer.appendChild(projectImage);
+            imageContainer.appendChild(imageCaption);
+            projectImagesContainer.appendChild(imageContainer);
+        });
+    }
 
         const projectTechStack = document.createElement('div');
         projectTechStack.classList.add('tech-stack');
@@ -215,10 +310,12 @@ document.addEventListener("DOMContentLoaded", () => {
         projectCard.appendChild(projectTitle);
         projectCard.appendChild(projectLinks);
         projectCard.appendChild(projectDescription);
+        projectCard.appendChild(projectImagesContainer); // Append the images container below the description
         projectCard.appendChild(projectTechStack);
 
         projectList.appendChild(projectCard);
     });
+    initializeLightbox();
 
     // Experience array
     const experiences = [

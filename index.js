@@ -214,10 +214,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const projects = [
         {
             name: "Pantry Pal",
-            description: "Pantry Pal is a meal plan preperation web-app; I did frontend and my friend Janani did backend :) Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. Pantry Pal was securely deployed with Docker on a Google Cloud VM.",
+            description: "My introduction to web development was through Pantry Pal, a meal plan preperation app; where I worked on the frontend and my friend Janani did the backend :) Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. I securely deployed the frontend and backend using a three-tier architecture with HTTPS and Docker on a Google Cloud VM, ensuring continuous operation and seamless scalability.",
             techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
             youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE",
+            webLink: "https://rachelpan.me",
             images: [{ src: "./static/PantryPal1.jpg", caption: "My Pantry + Recipe Recs" }, 
                     { src: "./static/PantryPal2.jpg", caption: "Groups feature" }, 
                     { src: "./static/PantryPal3.jpg", caption: "Recipe Search" },
@@ -290,22 +291,30 @@ document.addEventListener("DOMContentLoaded", () => {
         const projectLinks = document.createElement('div');
         projectLinks.classList.add('project-links');
 
+        if (project.webLink) {
+            const webLink = document.createElement('a');
+            webLink.href = project.webLink;
+            webLink.target = "_blank";
+            webLink.classList.add('project-link');
+            webLink.innerHTML = '<i class="fa fa-link"></i>';
+            projectLinks.appendChild(webLink);
+        }
+
         const githubLink = document.createElement('a');
         githubLink.href = project.githubLink;
         githubLink.target = "_blank";
         githubLink.classList.add('project-link');
         githubLink.innerHTML = '<i class="fab fa-github"></i>';
 
-        const youtubeLink = document.createElement('a');
-        youtubeLink.href = project.youtubeLink;
-        youtubeLink.target = "_blank";
-        youtubeLink.classList.add('project-link');
-        youtubeLink.innerHTML = '<i class="fab fa-youtube"></i>';
-
         projectLinks.appendChild(githubLink);
 
         if (project.youtubeLink) {
-         projectLinks.appendChild(youtubeLink);
+            const youtubeLink = document.createElement('a');
+            youtubeLink.href = project.youtubeLink;
+            youtubeLink.target = "_blank";
+            youtubeLink.classList.add('project-link');
+            youtubeLink.innerHTML = '<i class="fab fa-youtube"></i>';
+            projectLinks.appendChild(youtubeLink);
         }
 
         projectCard.appendChild(projectTitle);
@@ -324,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "DevOps Intern",
             company: "SS&C Technologies",
             duration: "September 2023 - April 2024",
-            description: ["✿ Migrated a RESTful application from Perl to Node-RED, streamlining environment information tracking, and supporting database management & XML file maintenance", 
+            description: ["✿ Migrated a RESTful application from Perl to Node-RED, Javascript, and ShellScript, automating environment information tracking & XML file maintenance", 
                           "✿ Deployed the application with Docker, Kubernetes, and Helm, on RedHat OpenShift", 
                           "✿ Automated daily report analysis with Perl and Node-RED eliminating hours of administrative tasks per week and guaranteeing reliability", 
                           "✿ Independently learned and introduced a new technology (Node-RED) to a team of developers by conducting a live demo & detailed presentation"],

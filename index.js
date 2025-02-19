@@ -333,12 +333,12 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "DevOps Intern",
             company: "SS&C Technologies",
             duration: "September 2023 - April 2024",
-            description: ["✿ Proactively self-learned and introduced Node-RED to a team of software developers through a detailed presentation and live demo, equipping the team with a tool that streamlines process automation.", 
-                          "✿ Modernized a hacky, legacy environment tracking application from Perl to Node-RED, improving codebase modularity and reducing technical debt.", 
-                          "✿ Extended the application with remote environments and GitHub integration using ShellScript, ensuring centralized, accurate, and accessible information files.", 
-                          "✿ Optimized the application's logs by integrating Log4j into real-time console outputs and regularly updated files, ensuring efficient troubleshooting and consistent, reliable, monitoring.",
+            description: ["✿ Proactively self-learned and introduced Node-RED to a team of software developers through a live demo, providing a streamlined tool for process automation.", 
+                          "✿ Modernized a legacy environment tracking application with Node-RED and JavaScript, improving codebase modularity and reducing technical debt, resulting in a 30% reduction in maintenance time.", 
+                          "✿ Extended the application with remote environments and GitHub integration using ShellScript, ensuring 99% configuration consistency across development, staging, and production environments.", 
+                          "✿ Optimized the application’s logs by integrating Log4j into real-time console outputs and regularly updated files, reducing log retrieval time by 30% and enabling faster issue diagnosis.",
                           "✿ Deployed the application with Docker, Kubernetes, and Helm on RedHat OpenShift to ensure continuous operation and seamless scalability.",
-                          "✿ Automated daily report analysis with Perl and Node-RED, guaranteeing reliability and eliminating hours of administrative tasks per week. "],
+                          "✿ Automated daily report analysis with Perl and Node-RED, guaranteeing reliability and eliminating 4 hours of administrative tasks per month"],
             image: "./static/SS&C_Technologies.png"
         },
     ];

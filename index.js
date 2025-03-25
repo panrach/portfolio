@@ -330,6 +330,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Experience array
     const experiences = [
         {
+            title: "Developer",
+            company: "Bank of Canada",
+            duration: "May 2025 - August 2025",
+            description: ["✿ Incoming this summer"],
+            image: "./static/BankOfCanada.svg.webp"
+        },
+        {
             title: "DevOps Intern",
             company: "SS&C Technologies",
             duration: "September 2023 - April 2024",

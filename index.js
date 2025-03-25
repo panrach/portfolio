@@ -218,7 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
             techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
             youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE",
-            webLink: "https://rachelpan.me",
             images: [{ src: "./static/PantryPal1.jpg", caption: "My Pantry + Recipe Recs" }, 
                     { src: "./static/PantryPal2.jpg", caption: "Groups feature" }, 
                     { src: "./static/PantryPal3.jpg", caption: "Recipe Search" },

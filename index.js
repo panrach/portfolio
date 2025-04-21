@@ -216,13 +216,25 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "Pantry Pal",
             description: "My introduction to web development was through Pantry Pal, a meal plan preperation app; where I worked on the frontend and my friend Janani did the backend :) Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. I securely deployed the frontend and backend using a three-tier architecture with HTTPS and Docker on a Google Cloud VM, ensuring continuous operation and seamless scalability.",
             techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
-            githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git", // GitHub repository link
+            githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git",
             youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE",
             images: [{ src: "./static/PantryPal1.jpg", caption: "My Pantry + Recipe Recs" }, 
                     { src: "./static/PantryPal2.jpg", caption: "Groups feature" }, 
                     { src: "./static/PantryPal3.jpg", caption: "Recipe Search" },
                     { src: "./static/PantryPal4.jpg", caption: "Automatic ingredient split for a planned recipe" },
                     { src: "./static/PantryPal5.jpg", caption: "Meal plans" }],
+        },
+        {
+            name: "Pintos Operating System",
+            description: "Building off an educational OS (Pintos) helped me improve my understanding of low-level programming and OS concepts. I implemented thread synchronization (locks, semaphores, priority donation), system calls for user programs, and virtual memory with demand paging and a second-chance clock algorithm. I also extended the file system to support extensible files, subdirectories, and concurrent access.",
+            techStack: ["C", "GDB", "Docker"],
+            images: [{src: "./static/pintos-diagram.png", caption: "Priority donation diagram"}, {src: "./static/virtual-memory.png", caption: "Basic page access flowchart"}]
+        },
+        {
+            name: "Personal Website",
+            description: "I further improved my web development skills by building this website using vanilla HTML and CSS - it is also responsive. See the GitHub README file for credits on the background, cursor, and cherry blossom animation :)",
+            techStack: ["HTML", "CSS", "JavaScript"],
+            githubLink: "https://github.com/panrach/portfolio"
         },
         {
             name: "Tetris",
@@ -232,11 +244,11 @@ document.addEventListener("DOMContentLoaded", () => {
             images: [{ src: "./static/tetris1.jpg", caption: "Starting the tetris game!" }, { src: "./static/tetris2.jpg", caption: "Holding a block" }, { src: "./static/tetris3.jpg", caption: "Cleared a row!" }]
         },
         {
-            name: "Personal Website",
-            description: "I further improved my web development skills by building this website using vanilla HTML and CSS - it is also responsive. See the GitHub README file for credits on the background, cursor, and cherry blossom animation :)",
-            techStack: ["HTML", "CSS", "JavaScript"],
-            githubLink: "https://github.com/panrach/portfolio"
-        },
+            name: "Job Search Platform",
+            description: "This platform is Tinder but for job searching! I worked on the database using PostgreSQL, which supports swiping left or right on job postings, scheduling interviews, analytics on swiping habits, and profile customization. I designed the schema, wrote unit tests with Mocha.js, and wrote the queries.",
+            techStack: ["PostgreSQL", "Mocha.js", "Git"],
+            images: [{src: "./static/er-portfolio.png", caption: "Database Schema"}, {src: "./static/unit-test.png", caption: "Mocha.js unit test for swiping"}]
+        }
     ];
 
     // Get the project list container
@@ -299,13 +311,14 @@ document.addEventListener("DOMContentLoaded", () => {
             projectLinks.appendChild(webLink);
         }
 
-        const githubLink = document.createElement('a');
-        githubLink.href = project.githubLink;
-        githubLink.target = "_blank";
-        githubLink.classList.add('project-link');
-        githubLink.innerHTML = '<i class="fab fa-github"></i>';
-
-        projectLinks.appendChild(githubLink);
+        if (project.githubLink) {
+            const githubLink = document.createElement('a');
+            githubLink.href = project.githubLink;
+            githubLink.target = "_blank";
+            githubLink.classList.add('project-link');
+            githubLink.innerHTML = '<i class="fab fa-github"></i>';
+            projectLinks.appendChild(githubLink);
+        }
 
         if (project.youtubeLink) {
             const youtubeLink = document.createElement('a');
@@ -421,7 +434,8 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "Frameworks & Technologies",
             items: [
                 { name: "React.js", logo: "./static/React-icon.png" },
-                { name: "Node.js", logo: "./static/nodejs.png" }
+                { name: "Node.js", logo: "./static/nodejs.png" },
+                { name: "Mocha.js", logo: "./static/mocha.png" },
             ]
         },
         {

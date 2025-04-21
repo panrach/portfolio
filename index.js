@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             name: "Pantry Pal",
             description: "My introduction to web development was through Pantry Pal, a meal plan preperation app; where I worked on the frontend and my friend Janani did the backend :) Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. I securely deployed the frontend and backend using a three-tier architecture with HTTPS and Docker on a Google Cloud VM, ensuring continuous operation and seamless scalability.",
-            techStack: ["React.js", "Express.js", "Node.js", "FireBaseDB", "Docker"],
+            techStack: ["React.js", "Node.js", "FireBaseDB", "Docker"],
             githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git",
             youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE",
             images: [{ src: "./static/PantryPal1.jpg", caption: "My Pantry + Recipe Recs" }, 
@@ -223,6 +223,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     { src: "./static/PantryPal3.jpg", caption: "Recipe Search" },
                     { src: "./static/PantryPal4.jpg", caption: "Automatic ingredient split for a planned recipe" },
                     { src: "./static/PantryPal5.jpg", caption: "Meal plans" }],
+        },
+        {
+            name: "Stock Portfolio Site",
+            description: "I developed both the frontend and backend for a social stock trading platform. I designed and implemented a RESTful API with Express.js so users can securely access their personal stock data. Users can create accounts, view stock analytics (covariance, correltion, beta), see stock predictions, send/receive friend requests, view/share stock lists, and create their own portfolios",
+            techStack: ["Express.js", "Node.js", "PostgreSQL", "HTML", "CSS"],
+            githubLink: "https://github.com/panrach/c43-proj.git",
+            images: [{ src: "./static/stock-er.png", caption: "Database Schema" }, { src: "./static/stock-data.png", caption: "Viewing stock data" }]
         },
         {
             name: "Pintos Operating System",

@@ -31,6 +31,7 @@ main {
     flex-direction: column;
     align-items: center;
     background: url('./static/background.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .section {

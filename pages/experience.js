@@ -1,5 +1,4 @@
 export function initializeExperience() {
-  // Experience array
   const experiences = [
     {
       title: "Developer",

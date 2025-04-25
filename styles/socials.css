@@ -6,7 +6,7 @@
 .social-links a {
     color: #ff729f;
     margin: 0 10px;
-    font-size: 1.5em;
+    font-size: 1.9em;
     transition: color 0.3s;
     cursor: url('../static/cursor.cur'), auto; /* Custom cursor for clickable elements */
 }

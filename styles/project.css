@@ -40,18 +40,21 @@
     gap: 10px;
     margin-top: 10px;
     position: absolute; /* Absolute positioning for the icons */
-    top: 10px; /* Move to the top */
-    right: 10px; /* Align to the right */
+    right: 15px; /* Align to the right */
+    top: 2px; /* Adjust this value to move the icons up */
 }
 
 .project-link {
     color: #ff729f;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.8em;
+    transition: color 0.3s, transform 0.3s; /* Smooth scaling effect */
+    cursor: url('../static/cursor.cur'), auto; /* Custom cursor for clickable elements */
 }
 
 .project-link:hover {
     color: #fff;
+    transform: scale(1.1); /* Slightly enlarge on hover */
     cursor: url('../static/cursor.cur'), auto; /* Custom cursor for YouTube and GitHub logos */
 }
 

@@ -9,6 +9,8 @@
     transform: translateY(20px); /* Start with a slight downward offset */
     animation: fadeInUp 0.6s forwards; /* Apply animation */
     animation-delay: 0.2s; /* Delay the animation slightly */
+    width: 100%; /* Stretch to full width */
+    margin-left: 40px; /* Shift the section to the right */
 }
 
 #profile-pic {
@@ -21,7 +23,7 @@
 }
 
 .about-text {
-    max-width: 600px;
+    max-width: 800px;
     text-align: left;
 }
 
@@ -73,6 +75,14 @@ iframe {
 }
 
 @media (max-width: 855px) {
+    .about-content span {
+        font-size: 1em; /* Further adjust font size for very small screens */
+    }
+
+    .about-content {
+        margin-left: 10px; /* Shift the entire content to the left */
+    }
+
     .video-item {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center the content vertically */
@@ -108,6 +118,7 @@ iframe {
         width: 100%; /* Ensure full width on smaller screens */
         max-width: 200px; /* Remove maximum width constraint */
     }
+
 }
 
 
@@ -126,11 +137,17 @@ iframe {
     }
 
     .about-text {
-        font-size: 0.8em; /* Further adjust font size for very small screens */
+        text-align: center; /* Center the text */
+        max-width: 40%; /* Reduce the width for smaller screens */
+        margin-left: -10px; /* Shift the text slightly to the left */
     }
 
     .about-content span {
         font-size: 1em; /* Further adjust font size for very small screens */
+    }
+
+    .about-content {
+        margin-left: -10px; /* Shift the entire content to the left */
     }
 }
 

@@ -1,0 +1,88 @@
+
+.animation-wrapper {
+    text-align: center;
+    color: #555;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    padding-top: 1vh; /* Reduced padding */
+    height: auto; /* Adjusted height */
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+    margin-bottom: 10px; /* Adjusted margin to reduce spacing */
+    margin-left: 20px; /* Move to the right */
+}
+
+.animation-wrapper div {
+    display: block; /* Ensure each div is on a new line */
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 5px; /* Adjusted margin to reduce spacing */
+}
+
+.animation-wrapper div:first-of-type {
+    animation: showup 7s forwards;
+}
+
+.animation-wrapper div:last-of-type {
+    width: auto; /* Adjusted width */
+    animation: reveal 7s forwards;
+}
+
+.animation-wrapper div:last-of-type span {
+    margin-left: 0; /* Adjusted margin */
+    animation: slidein 7s forwards;
+}
+
+@keyframes showup {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes slidein {
+    0% { margin-left: -800px; }
+    20% { margin-left: -800px; }
+    35% { margin-left: 0px; }
+    100% { margin-left: 0px; }
+}
+
+@keyframes reveal {
+    0% {opacity: 0; width: 0px;}
+    20% {opacity: 1; width: 0px;}
+    30% {width: auto;}
+    80% {opacity: 1;}
+    100% {opacity: 1; width: auto;}
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

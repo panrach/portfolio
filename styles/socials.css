@@ -1,0 +1,16 @@
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-links a {
+    color: #ff729f;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+    cursor: url('../static/cursor.cur'), auto; /* Custom cursor for clickable elements */
+}
+
+.social-links a:hover {
+    color: #fff;
+}

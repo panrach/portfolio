@@ -13,11 +13,10 @@ export function initializeExperience() {
       duration: "September 2023 - April 2024",
       description: [
         "✿ Proactively self-learned and introduced Node-RED to a team of software developers through a live demo, providing a streamlined tool for process automation.",
-        "✿ Modernized a legacy environment tracking application with Node-RED and JavaScript.",
+        "✿ Modernized a legacy RESTful application with Node-RED and JavaScript.",
         "✿ Extended the application with remote environments and GitHub integration using ShellScript.",
-        "✿ Optimized the application's logs by integrating Log4j into real-time console outputs and regularly updated files.",
         "✿ Deployed the application with Docker, Kubernetes, and Helm on RedHat OpenShift to ensure continuous operation and seamless scalability.",
-        "✿ Developed an automation app that analyzes daily reports and emails the results using Perl and Node-RED.",
+        "✿ Developed an automation application that analyzes daily reports and emails the results using Perl and Node-RED.",
       ],
       image: "./static/SS&C_Technologies.png",
     },

@@ -28,6 +28,7 @@ export function initializeSkills() {
         { name: "Git", logo: "./static/Git.png" },
         { name: "Docker", logo: "./static/docker-logo.png" },
         { name: "Linux", logo: "./static/linux.png" },
+        { name: "Databricks", logo: "./static/Databricks_Logo.png" },
       ],
     },
   ];

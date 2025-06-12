@@ -4,7 +4,7 @@ export function initializeExperience() {
       title: "Developer",
       company: "Bank of Canada",
       duration: "May 2025 - August 2025",
-      description: ["✿ Analytic Environment Data Services Team"],
+      description: ["✿ Analytic Environment Data Services"],
       image: "./static/BankOfCanada.svg.webp",
     },
     {

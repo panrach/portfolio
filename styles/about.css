@@ -42,36 +42,36 @@
 .video-content {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
 }
 
+
 .video-item {
-    display: flex; /* Ensure the video item uses Flexbox */
-    flex-direction: row; /* Stack items vertically */
-    align-items: center; /* Center the content vertically */
-    gap: 20px; /* Add space between the video and the image */
-    margin: 20px;
-    width: 200%; /* Ensure full width */
-    max-width: 800px; /* Set a maximum width */
+    display: flex;
+    flex-direction: row;      /* Side by side */
+    align-items: center;      /* Vertically center */
+    justify-content: center;  /* Horizontally center */
+    gap: 24px;                /* Space between video and image */
+    margin: 20px 0;
+    width: 100%;
+    max-width: 800px;         /* Adjust as needed */
 }
 
 iframe {
-    width: 100%; /* Make the iframe responsive */
-    height: auto; /* Maintain the aspect ratio */
-    aspect-ratio: 16 / 9; /* Set the aspect ratio */
+    width: 800px;            
+    height: 250px;            
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .craft-image {
-    width: 100%; /* Make the image responsive */
-    max-width: 230px; /* Set a maximum width */
-    height: auto; /* Maintain the aspect ratio */
+    width: 200px;             /* Smaller image */
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
 }
 
 @media (max-width: 855px) {

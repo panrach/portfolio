@@ -4,7 +4,13 @@ export function initializeExperience() {
       title: "Developer",
       company: "Bank of Canada",
       duration: "May 2025 - August 2025",
-      description: ["✿ Analytic Environment Data Services Team"],
+      description: [
+        "✿ Analytic Environment Data Services Team",
+        "✿ Developing pipelines to ingest data from raw to curated layers in a data lake.",
+        "✿ Developed pipelines to ingest data in a data lake with Python and Azure Databricks, improving ingestion efficiency by 40%.",
+        "✿ Transformed raw data into standardized and curated structures using Apache Spark, optimizing transformation logic to reduce processing time by 50%.",
+        "✿ Implemented unit tests with unittest and MagicMock for Spark transformation functions, increasing logic coverage, and preemptively detecting logic errors."
+      ],
       image: "./static/BankOfCanada.svg.webp",
     },
     {

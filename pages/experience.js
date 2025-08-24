@@ -6,9 +6,10 @@ export function initializeExperience() {
       duration: "May 2025 - August 2025",
       description: [
         "✿ Analytic Environment Data Services Team",
-        "✿ Developed pipelines to ingest data in a data lake with Python and Azure Databricks, improving ingestion efficiency by 40%.",
-        "✿ Transformed raw data into standardized and curated structures using Apache Spark, optimizing transformation logic to reduce processing time by 50%.",
-        "✿ Implemented unit tests with unittest and MagicMock for Spark transformation functions, increasing logic coverage, and preemptively detecting logic errors."
+        "✿ Developed pipelines to ingest data in a data lake with Python and Azure Databricks.",
+        "✿ Transformed raw data into standardized and curated structures using Apache Spark.",
+        "✿ Implemented unit tests with unittest and MagicMock for Spark transformation functions.",
+        "✿ Fixed React.js component and state management bugs, resolving frontend errors in production by 15%."
       ],
       image: "./static/BankOfCanada.svg.webp",
     },

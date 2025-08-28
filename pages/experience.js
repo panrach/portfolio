@@ -11,6 +11,7 @@ export function initializeExperience() {
         "✿ Collaborated with stakeholders to define pipeline requirements and delivered knowledge transfers, simplifying pipeline maintenance.",
         "✿ Implemented unit tests with unittest and MagicMock for Spark transformation functions.",
         "✿ Implemented full-stack features for an economic forecasting webapp, integrating a React.js frontend, FastAPI backend, and PostgreSQL database.",
+        "✿ Designed and implemented a reusable React.js component library.",
         "✿ Developed unit tests with Jest.js, validating component behavior and ensuring code quality."
       ],
       image: "./static/BankOfCanada.svg.webp",

@@ -14,7 +14,7 @@ export function initializeExperience() {
       image: "./static/BankOfCanada.svg.webp",
     },
     {
-      title: "DevOps Intern",
+      title: "Software Engineer",
       company: "SS&C Technologies",
       duration: "September 2023 - April 2024",
       description: [

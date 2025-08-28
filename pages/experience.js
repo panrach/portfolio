@@ -7,9 +7,11 @@ export function initializeExperience() {
       description: [
         "✿ Analytic Environment Data Services Team",
         "✿ Developed pipelines to ingest data in a data lake with Python and Azure Databricks.",
-        "✿ Transformed raw data into standardized and curated structures using Apache Spark.",
+        "✿ Optimized a high-volume data pipeline with Apache Spark, reducing raw-to-curated transformations by 50%.",
+        "✿ Collaborated with stakeholders to define pipeline requirements and delivered knowledge transfers, simplifying pipeline maintenance.",
         "✿ Implemented unit tests with unittest and MagicMock for Spark transformation functions.",
-        "✿ Fixed React.js component and state management bugs, resolving frontend errors in production by 15%."
+        "✿ Implemented full-stack features for an economic forecasting webapp, integrating a React.js frontend, FastAPI backend, and PostgreSQL database.",
+        "✿ Developed unit tests with Jest.js, validating component behavior and ensuring code quality."
       ],
       image: "./static/BankOfCanada.svg.webp",
     },

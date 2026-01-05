@@ -1,11 +1,19 @@
 export function initializeExperience() {
   const experiences = [
     {
+      title: "Developer (Part-Time)",
+      company: "Bank of Canada",
+      duration: "Jan 2026 - Present",
+      description: [
+        "✿ Analytic Environment Data Services Team"
+      ],
+      image: "./static/BankOfCanada.svg.webp",
+    }, 
+    {
       title: "Developer",
       company: "Bank of Canada",
       duration: "May 2025 - August 2025",
       description: [
-        "✿ Analytic Environment Data Services Team",
         "✿ Developed pipelines to ingest data in a data lake with Python and Azure Databricks.",
         "✿ Optimized a high-volume data pipeline with Apache Spark, reducing raw-to-curated transformations by 50%.",
         "✿ Collaborated with stakeholders to define pipeline requirements and delivered knowledge transfers, simplifying pipeline maintenance.",

@@ -8,7 +8,7 @@ export function initializeProjects() {
       description:
         "My introduction to web development was through Pantry Pal, a meal plan preperation app; where I worked on the frontend and my friend Janani did the backend :) Users keep track of pantry items, receive recipe suggestions based on their pantry, and receive notifications to purchase & defrost ingredients. The synchronous collaboration features allow users to create groups, share ingredients, and discover group recipes. I securely deployed the frontend and backend using a three-tier architecture with HTTPS and Docker on a Google Cloud VM, ensuring continuous operation and seamless scalability.",
       techStack: ["React.js", "Node.js", "FireBaseDB", "Docker"],
-      githubLink: "https://github.com/UTSCC09/project-janani-and-rachel.git",
+      githubLink: "https://github.com/janani-gurram/project-janani-and-rachel.git",
       youtubeLink: "https://www.youtube.com/watch?v=tRbbwgVwjrE",
       images: [
         { src: "./static/PantryPal1.jpg", caption: "My Pantry + Recipe Recs" },

@@ -1,7 +1,7 @@
 export function initializeExperience() {
   const experiences = [
     {
-      title: "Developer (Full-Time)",
+      title: "Developer",
       company: "Bank of Canada",
       duration: "May 2026 - Present",
       description: [

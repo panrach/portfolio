@@ -1,11 +1,21 @@
 export function initializeExperience() {
   const experiences = [
     {
-      title: "Developer (Part-Time)",
+      title: "Developer (Full-Time)",
       company: "Bank of Canada",
-      duration: "Jan 2026 - Present",
+      duration: "May 2026 - Present",
       description: [
         "✿ Analytic Environment Data Services Team"
+      ],
+      image: "./static/BankOfCanada.svg.webp",
+    }, 
+    {
+      title: "Developer (Part-Time)",
+      company: "Bank of Canada",
+      duration: "Jan 2026 - April 2026",
+      description: [
+        "✿ Implemented full-stack features for a metadata webapp, integrating a React.js frontend and Go backend",
+        "✿ More pipelines!",
       ],
       image: "./static/BankOfCanada.svg.webp",
     }, 

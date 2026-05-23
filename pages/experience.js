@@ -6,7 +6,7 @@ export function initializeExperience() {
       duration: "Jan 2026 - May 2026",
       description: [
         "✿ Implemented full-stack features for a metadata webapp, integrating a React.js frontend and Go backend",
-        "✿ More pipelines!",
+        "✿ More pipelines :)",
       ],
       image: "./static/BankOfCanada.svg.webp",
     }, 

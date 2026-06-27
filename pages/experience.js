@@ -1,5 +1,14 @@
 export function initializeExperience() {
   const experiences = [
+   {
+      title: "Software Developer",
+      company: "Skatescribe Corporation",
+      duration: "May 2026 - Present",
+      description: [
+        ""
+      ],
+      image: "./static/skatescribe.webp",
+    }, 
     {
       title: "Developer (Part-Time)",
       company: "Bank of Canada",
